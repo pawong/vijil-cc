@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "server"
+version = "0.1.0"
+description = ""
+authors = ["Paul Wong <pwong@jaiken.com>"]
+readme = "README.md"
+packages = [{ include = "api" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.104.1"
+uvicorn = { extras = ["standard"], version = "^0.24.0.post1" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "api.main:start"
